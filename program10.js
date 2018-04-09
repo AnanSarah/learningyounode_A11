@@ -1,17 +1,17 @@
 var net = require('net')
 
 
-function zeroFill(i) {
+function dateTime(i) {
     return (i < 10 ? '0' : '') + i
 }
 
 function now() {
     var d = new Date()
     return d.getFullYear() + '-'
-        + zeroFill(d.getMonth() + 1) + '-'
-        + zeroFill(d.getDate()) + ' '
-        + zeroFill(d.getHours()) + ':'
-        + zeroFill(d.getMinutes())
+        + dateTime(d.getMonth() + 1) + '-'
+        + dateTime(d.getDate()) + ' '
+        + dateTime(d.getHours()) + ':'
+        + dateTime(d.getMinutes())
 }
 
 

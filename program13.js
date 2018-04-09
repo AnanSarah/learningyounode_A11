@@ -1,13 +1,13 @@
 var net = require('net')
- function zeroPadding(nb) {
+ function time(nb) {
      return (nb < 10) ? ('0' + nb) : (nb)
  }
  function formatDate(date) {
      return date.getFullYear()
-         +'-'+zeroPadding((date.getMonth() + 1))
-         +'-'+zeroPadding(date.getDate())
-         +' '+zeroPadding(date.getHours())
-         +':'+zeroPadding(date.getMinutes())
+         +'-'+time((date.getMonth() + 1))
+         +'-'+time(date.getDate())
+         +' '+time(date.getHours())
+         +':'+time(date.getMinutes())
  }
  var server = net.createServer(function(socket) {
      var date = new Date();
